@@ -15,26 +15,22 @@ This project classifies lithology from drill core images into four categories (s
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/username/lithology-classification.git
-cd lithology-classification
-
-2. Install dependencies:
+git clone https://github.com/sheharyaar/lithology-identification-core-images
+cd lithology-identification-core-images
+```
+2. Extract the dataset
 
 ```bash
+tar -xzvf dataset.tar.gz
+```
+
+3. Install dependencies in a virtuallenv:
+
+```bash
+python -m virtualenv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
-
-## Dataset Structure
-
-The dataset should be structured as follows:
-
-```bash
-dataset/
-├── train/
-├── val/
-└── test/
-```
-
 ## Training
 
 To train the model:
@@ -51,4 +47,15 @@ To test the model:
 python src/test.py
 ```
 
+## Dataset Structure
+
+The dataset should be structured as follows:
+
+```bash
+dataset/
+├── train/
+├── val/
+└── test/
+```
 The model accuracy and other metrics will be printed after execution.
+
